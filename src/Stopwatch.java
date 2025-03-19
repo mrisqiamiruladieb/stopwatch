@@ -22,7 +22,10 @@ public class Stopwatch implements ActionListener {
     //construct
     Stopwatch() {
         
-        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(420, 420);
+        frame.setLayout(null);
+        frame.setVisible(true);
         
     }
     
