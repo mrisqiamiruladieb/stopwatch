@@ -71,14 +71,29 @@ public class Stopwatch implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if (e.getSource() == startButton) {
+            
+            if (started == false) {
+                started = true;
+                startButton.setText("STOP");
+                start();
+            }
+            else {
+                started = false;
+                startButton.setText("START");
+                stop();
+            }
+            
+        }
+        
     }
     
     void start() {
-        
+        timer.start();
     }
     
     void stop() {
-        
+        timer.stop();
     }
     
     void reset() {
