@@ -29,7 +29,19 @@ public class Stopwatch implements ActionListener {
         timeLabel.setOpaque(true);
         timeLabel.setHorizontalAlignment(JTextField.CENTER);
         
+        startButton.setBounds(100, 200, 100, 50);
+        startButton.setFont(new Font("Ink Free", Font.PLAIN, 20));
+        startButton.setFocusable(false);
+        startButton.addActionListener(this);
+        
+        resetButton.setBounds(200, 200, 100, 50);
+        resetButton.setFont(new Font("Ink Free", Font.PLAIN, 20));
+        resetButton.setFocusable(false);
+        resetButton.addActionListener(this);
+        
         frame.add(timeLabel);
+        frame.add(startButton);
+        frame.add(resetButton);
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 420);
